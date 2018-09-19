@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: dubbo-client
+
+server:
+  port: 51002
+
+dubbo:
+  # 消费者
+  consumer:
+    # 超时时间
+    timeout: 5000
+  # 注册中心配置
+  registry:
+    # 协议
+    protocol: zookeeper
+    # 地址
+    address: 192.168.81.128:2181, 192.168.81.129:2181, 192.168.81.130:2181
+    # 客户端
+    client: curator
